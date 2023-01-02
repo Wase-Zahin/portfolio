@@ -96,6 +96,13 @@ input:checked+.slider {
     border-radius: 50%;
 }
 
+.hero {
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+    font-size: 4.2rem;
+}
+
 footer {
     display: flex;
     justify-content: center;

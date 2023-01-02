@@ -1,26 +1,29 @@
 import { TypeAnimation } from "react-type-animation";
 
 const About = () => {
+    const hero = {
+        display: "flex",
+        fontSize: "6rem",
+        fontWeight: "200",
+        justifyContent: "center",
+    }
     return (
         <div>
             <div className="about-section-hero">
-                <TypeAnimation
-                sequence={[
-                    'Wase Zahin', 1000,
-                    'Wase Zahin Web Developer'
-                ]}
-                wrapper="div"
-                cursor={true}
-                style={{ fontSize: '1rem' }}
-                />
-                This is Hero section
+                <h1 className="hero">
+                    Wase<br></br>
+                    Zahin<br></br>
+                    Web Developer           
+                </h1>
+                <hr></hr>
+                <h1>About</h1>
             </div>
-            <div className="about-section-main">
 
+            <div className="about-section-main">
+                <p>This is my about section. And I fill it with temporary text for now. Lorem Ipsum</p>
             </div>
         </div>
     )
 }
-
 
 export default About;
