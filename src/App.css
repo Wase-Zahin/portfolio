@@ -17,24 +17,27 @@
 body {
     background-color: var(--background-color);
     margin: auto;
-    max-width: 1290px;
+    min-height: 100vh;
+    max-width: 960px;
+    width: 100%;
     padding: 1.2rem;
     color: var(--font-color);
 }
 
 header {
+    max-width: 1290px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
 
 @media screen and (max-width: 768px) {
     .toggle-theme-wrapper {
         display: none;
     }
 }
+
 /* Custom Dark Mode Toggle Element */
 .toggle-theme-wrapper {
     display: flex;
@@ -98,9 +101,69 @@ input:checked+.slider {
 
 .hero {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 2rem;
+    background: url(../src/components/Icons&Images/hero_section_gradients/Midnight\ City.jpg);
+    max-width: 60rem;
+    box-shadow: 15px 15px 15px black;
+    border: 1px solid rgb(95, 61, 61);
+}
+
+.hero h1 {
     font-weight: 200;
-    font-size: 4.2rem;
+    /* font-size: 4.2rem; */
+    animation-duration: 2s;
+    animation-name: slidein;
+    font-size: 5vw;
+    background-color: red;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+
+.hero>h1:nth-child(2) {
+    padding-left: 15%;
+}
+
+.hero>h1:nth-child(3) {
+    padding-left: 30%;
+}
+
+.hero>h1:nth-child(4) {
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+.logo img {
+    height: 36px;
+    width: 36px;
+    border: 2px dotted black;
+    box-shadow: 1px 1px 1px black;
 }
 
 footer {
