@@ -11,9 +11,9 @@ const About = () => {
     }
     useEffect(() => {
         Aos.init({
-          duration : 2000
+            duration: 2000
         });
-      }, []);
+    }, []);
     return (
         <div>
             <div className="about-section-hero">
@@ -21,23 +21,25 @@ const About = () => {
                     <h1>Wase</h1>
                     <h1>Zahin</h1>
                     <h1>Web</h1>
-                    <h1>Developer</h1>           
+                    <h1>Developer</h1>
                 </div>
                 <hr></hr>
-                <h1>About</h1>
             </div>
 
             <div className="about-section-main">
-                <p>This is my about section. And I fill it with temporary text for now. Lorem Ipsum</p>
-            </div>
+                <div>
+                    <h1>About</h1>
+                    <p>This is my about section. And I fill it with temporary text for now. Lorem Ipsum</p>
+                </div>
 
-            <div className="logo">
-                <img src={require("../Icons&Images/skills_icons/React-01.png")} alt='React'></img>
-                <img src={require("../Icons&Images/skills_icons/Vue-JS-01.png")} alt='React'></img>
-                <img src={require("../Icons&Images/skills_icons/Python-04.png")} alt='React'></img>
-                <img src={require("../Icons&Images/skills_icons/Npm-01.png")} alt='React'></img>
-                <img src={require("../Icons&Images/skills_icons/JavaScript-01.png")} alt='React'></img>
-                <img src={require("../Icons&Images/skills_icons/MongoDB-01.png")} alt='React'></img>
+                <div className="logo">
+                    <img src={require("../Icons&Images/skills_icons/React-01.png")} alt='React'></img>
+                    <img src={require("../Icons&Images/skills_icons/Vue-JS-01.png")} alt='React'></img>
+                    <img src={require("../Icons&Images/skills_icons/Python-04.png")} alt='React'></img>
+                    <img src={require("../Icons&Images/skills_icons/Npm-01.png")} alt='React'></img>
+                    <img src={require("../Icons&Images/skills_icons/JavaScript-01.png")} alt='React'></img>
+                    <img src={require("../Icons&Images/skills_icons/MongoDB-01.png")} alt='React'></img>
+                </div>
             </div>
             <hr></hr>
         </div>

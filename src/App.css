@@ -20,21 +20,59 @@ body {
     min-height: 100vh;
     max-width: 960px;
     width: 100%;
-    padding: 1.2rem;
     color: var(--font-color);
 }
 
 header {
-    max-width: 1290px;
-    width: 100%;
+    z-index: 999999999999999999999999999999999999999999999999999;
+    position: relative;
+    padding: 1.2rem;
+    background-color: coral;
+    box-shadow: 2px 2px 2px rgb(192, 85, 46);
+}
+
+.fixedHeader {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 @media screen and (max-width: 768px) {
     .toggle-theme-wrapper {
         display: none;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    height: 100%; width: 100%;
+    top:0;right: 0;bottom: 0;left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.menu {
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu.open {
+    height: auto;
+    display: grid;
+    place-items: center;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }
 
@@ -111,7 +149,7 @@ input:checked+.slider {
 }
 
 .hero h1 {
-    font-weight: 200;
+    font-weight: 400;
     /* font-size: 4.2rem; */
     animation-duration: 2s;
     animation-name: slidein;
@@ -139,14 +177,17 @@ input:checked+.slider {
 }
 
 .hero>h1:nth-child(2) {
+    font-weight: 400;
     padding-left: 15%;
 }
 
 .hero>h1:nth-child(3) {
+    font-weight: bold;
     padding-left: 30%;
 }
 
 .hero>h1:nth-child(4) {
+    font-weight: bold;
     text-align: center;
 }
 
@@ -164,6 +205,14 @@ input:checked+.slider {
     width: 36px;
     border: 2px dotted black;
     box-shadow: 1px 1px 1px black;
+}
+
+.about-section-main {
+    padding: 1.2rem;
+}
+
+.projects {
+    padding: 1.2rem;
 }
 
 footer {
