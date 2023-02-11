@@ -24,16 +24,26 @@ body {
 }
 
 header {
-    z-index: 999999999999999999999999999999999999999999999999999;
+    z-index: 999;
     position: relative;
+    top:0; left: 0;
     padding: 1.2rem;
     background-color: coral;
-    box-shadow: 2px 2px 2px rgb(192, 85, 46);
+    box-shadow: 1px 1px 1px rgb(175, 79, 44);
+}
+
+.line {
+    margin: 0;
+    padding: 0;
 }
 
 .fixedHeader {
     display: flex;
     justify-content: space-between;
+}
+
+.fixedHeader img:hover {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -46,7 +56,7 @@ header {
     display: none;
     position: fixed;
     height: 100%; width: 100%;
-    top:0;right: 0;bottom: 0;left: 0;
+    top:0; left: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
@@ -63,14 +73,13 @@ header {
     list-style: none;
     justify-content: center;
     align-items: center;
-    animation: slideDown 0.3s ease-out;
+    animation: slideDown 0.3s ease-in-out;
 }
 
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
     }
-
     to {
         transform: translateY(0);
     }
@@ -191,20 +200,27 @@ input:checked+.slider {
     text-align: center;
 }
 
+.logo::-webkit-scrollbar {
+    display: none;
+}
+
 .logo {
     display: flex;
     gap: 1rem;
     padding: 1rem;
-    overflow: scroll;
-    scroll-behavior: smooth;
     overflow: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .logo img {
-    height: 36px;
-    width: 36px;
+    border-radius: 100%;
+    padding: 1rem;
+    height: 100px;
+    width: 100px;
     border: 2px dotted black;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 0.3px 0.3px 0.3px black;
 }
 
 .about-section-main {
@@ -213,6 +229,19 @@ input:checked+.slider {
 
 .projects {
     padding: 1.2rem;
+}
+
+.projectCards {
+    display: grid;
+    place-items: center;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.projectCards div {
+    background-color: #af4261;
+    height: 200px;
+    width: 200px;
 }
 
 footer {

@@ -5,7 +5,6 @@ const Menu = ({items, menuOpen}) => {
                 {items.map((item, i) => <li key={i}>{item}</li>)}
             </ul>
         </div>
-
     );
 };
 

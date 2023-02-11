@@ -13,6 +13,7 @@ function App() {
       <About></About>
       <Projects></Projects>
       <Footer></Footer>
+      <div className="overlay"></div>
     </div>
   );
 }

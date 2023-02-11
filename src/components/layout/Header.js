@@ -57,14 +57,11 @@ const Header = () => {
             onClick={toggleMenu}
             src={require("../Icons&Images/menu.png")}
             alt="menu">
-          </img>
-        }
+          </img>}
       </div>
       <div>
-        <div className="overlay"></div>
         <Menu items={["item 1", "item 2", "item 3"]} menuOpen={menuOpen}></Menu>
       </div>
-
     </header>
   )
 }
