@@ -5,7 +5,7 @@
 }
 
 :root.light {
-    --background-color: #F0ECCF;
+    --background-color: #eeeeee;
     --font-color: black;
 }
 
@@ -27,8 +27,8 @@ header {
     z-index: 999;
     position: relative;
     top:0; left: 0;
-    padding: 1.2rem;
-    background-color: coral;
+    padding: 0.5rem;
+    background-color: rgba(90, 48, 0, 0.979);
     box-shadow: 1px 1px 1px rgb(175, 79, 44);
 }
 
@@ -37,9 +37,18 @@ header {
     padding: 0;
 }
 
+.fixedHeader h1 {
+    font-size: 2rem;
+}
 .fixedHeader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.fixedHeader img {
+    height: 30px;
+    width: 30px;
 }
 
 .fixedHeader img:hover {
@@ -146,32 +155,11 @@ input:checked+.slider {
     border-radius: 50%;
 }
 
-.hero {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-    padding: 2rem;
-    background: url(../src/components/Icons&Images/hero_section_gradients/Midnight\ City.jpg);
-    max-width: 60rem;
-    box-shadow: 15px 15px 15px black;
-    border: 1px solid rgb(95, 61, 61);
+.section_padding {
+    padding: 1rem;
 }
 
-.hero h1 {
-    font-weight: 400;
-    /* font-size: 4.2rem; */
-    animation-duration: 2s;
-    animation-name: slidein;
-    font-size: 5vw;
-    background-color: red;
-    background-image: linear-gradient(45deg, #f3ec78, #af4261);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-}
+
 
 @keyframes slidein {
     from {
@@ -185,63 +173,8 @@ input:checked+.slider {
     }
 }
 
-.hero>h1:nth-child(2) {
-    font-weight: 400;
-    padding-left: 15%;
-}
-
-.hero>h1:nth-child(3) {
-    font-weight: bold;
-    padding-left: 30%;
-}
-
-.hero>h1:nth-child(4) {
-    font-weight: bold;
-    text-align: center;
-}
-
-.logo::-webkit-scrollbar {
-    display: none;
-}
-
-.logo {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    overflow: auto;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.logo img {
-    border-radius: 100%;
-    padding: 1rem;
-    height: 100px;
-    width: 100px;
-    border: 2px dotted black;
-    box-shadow: 0.3px 0.3px 0.3px black;
-}
-
 .about-section-main {
     padding: 1.2rem;
-}
-
-.projects {
-    padding: 1.2rem;
-}
-
-.projectCards {
-    display: grid;
-    place-items: center;
-    gap: 5rem;
-    margin-top: 2rem;
-}
-
-.projectCards div {
-    background-color: #af4261;
-    height: 200px;
-    width: 200px;
 }
 
 footer {

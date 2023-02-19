@@ -48,7 +48,7 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <header className="header">
+    <header className="header section_padding">
       <div className="fixedHeader">
         <h1>Logo</h1>
         {computerScreen ?

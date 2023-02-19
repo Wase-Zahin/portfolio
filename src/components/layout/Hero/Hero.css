@@ -1,0 +1,65 @@
+.hero {
+    display: flex;
+    /* flex-direction: column; */
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.73),rgba(161, 88, 4, 0.52)),
+    url('../../../../src/components/Icons&Images/hero_section_gradients/Cool\ Brown.jpg');
+    max-width: 60rem;
+    box-shadow: 15px 15px 15px black;
+    border: 1px solid rgb(95, 61, 61);
+}
+
+.hero_img p {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.hero_img {
+    height: fit-content;
+    width: 250px;
+}
+
+.hero_img img {
+    width: 100%;
+    height: auto;
+}
+
+.hero_content>h1:nth-child(2) {
+    font-weight: 400;
+    padding-left: 15%;
+}
+
+.hero_content>h1:nth-child(3) {
+    font-weight: bold;
+    padding-left: 30%;
+}
+
+.hero_content>h1:nth-child(4) {
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 400;
+    /* font-size: 4.2rem; */
+    animation-duration: 2s;
+    animation-name: slidein;
+
+    font-weight: 700;
+    font-size: 40px;
+    background-color: red;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+

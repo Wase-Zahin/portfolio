@@ -1,0 +1,12 @@
+.projectCards {
+    display: grid;
+    place-items: center;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.projectCards div {
+    background-color: #af4261;
+    height: 200px;
+    width: 200px;
+}
