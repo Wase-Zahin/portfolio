@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import About from './components/layout/About/About';
 import Footer from './components/layout/Footer';
-import Header from './components/layout/Header';
+import Header from './components/layout/Header/Header';
 import Hero from './components/layout/Hero/Hero';
 import Projects from './components/layout/Projects/Projects';
 

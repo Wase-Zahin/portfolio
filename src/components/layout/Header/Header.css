@@ -1,0 +1,24 @@
+header {
+    z-index: 999;
+    position: relative;
+    top:0; left: 0;
+    padding: 0.2rem 1.5rem;
+}
+.fixedHeader h1 {
+    font-size: 2rem;
+    color: #ff6f61;
+}
+.fixedHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fixedHeader img {
+    height: 30px;
+    width: 30px;
+}
+
+.fixedHeader img:hover {
+    cursor: pointer;
+}

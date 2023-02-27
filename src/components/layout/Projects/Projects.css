@@ -1,12 +1,88 @@
-.projectCards {
-    display: grid;
-    place-items: center;
-    gap: 5rem;
+#projects {
     margin-top: 2rem;
+
 }
 
-.projectCards div {
-    background-color: #af4261;
-    height: 200px;
-    width: 200px;
+.projectWrapper {
+    position: relative;
+    height: 80vh;
+    margin-bottom: 3rem;
+}
+
+.projectPreview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 70%;
+    width: 75%;
+    transition-duration: 1s;
+    filter: brightness(80%);
+}
+
+.projectPreview img {
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+.previewDecorator {
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.projectDescription {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--project-description-bg-color);
+    color: var(--project-description-color);
+    /* height: 55%; */
+    width: 70%;
+    font-size: 20px;
+    transition-duration: 1s;
+}
+
+.projectDescription h1 {
+    color: white;
+    padding: 0.2rem 1rem;
+    background-color: var(--project-header-color);
+    border: 1px solid black;
+    border-radius: 5%;
+    left: 3%;
+    top: -5%;
+    position: absolute;
+}
+
+.projectInfo {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+.skillsUsed {
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+.descripttionLine {
+    margin: 0 1.5rem;
+}
+
+@media screen and (max-width: 680px) {
+    .projectPreview {
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 85%;
+    }
+
+    .projectDescription {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
 }

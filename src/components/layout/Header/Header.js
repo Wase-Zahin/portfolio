@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import Menu from "../utils/Menu";
-import Theme from "../utils/Theme";
+import Menu from "../../utils/Menu";
+import Theme from "../../utils/Theme/Theme";
+import './Header.css';
 
 const Header = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -48,14 +49,14 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <header className="header section_padding">
+    <header className="header section_container">
       <div className="fixedHeader">
         <h1>Logo</h1>
         {computerScreen ?
           <Theme></Theme> :
           <img
             onClick={toggleMenu}
-            src={require("../Icons&Images/menu.png")}
+            src={require("../../Icons&Images/menu.png")}
             alt="menu">
           </img>}
       </div>
