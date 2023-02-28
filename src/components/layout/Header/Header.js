@@ -51,7 +51,7 @@ const Header = () => {
   return (
     <header className="header section_container">
       <div className="fixedHeader">
-        <h1>Logo</h1>
+        <h1>Z</h1>
         {computerScreen ?
           <Theme></Theme> :
           <img

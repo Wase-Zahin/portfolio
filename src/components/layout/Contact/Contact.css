@@ -1,0 +1,84 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 650px;
+    align-self: flex-end;
+    width: 100%;
+}
+
+.project_contents {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 3rem;
+}
+
+@media screen and (max-width: 700px) {
+    .contact_text {
+        text-align: justify;
+    }
+    .project_contents {
+        display: block;
+        padding: 0;
+    }
+    .project_contents .contact_links_wrapper {
+        width: 100%;
+        max-width: 350px;
+        margin:  0 auto;
+    }
+    .contact_links_wrapper .contact_links {
+        justify-content: start;
+    }
+    .project_contents form {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 778px) {
+    form {
+        width: 80%;
+    }
+}
+
+form>input, form>textarea {
+    padding: 6px;
+}
+
+form>input:focus, form>textarea:focus {
+    outline: 2px solid #ff6f61;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    color: var(--font-color);
+}
+
+.contact_text {
+    text-align: center;
+    text-align: justify;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact_links_wrapper {
+    width: 50%;
+}
+
+.contact_links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 18px 0;
+    justify-content: flex-end;
+}
+
+.wechat {
+    text-decoration: underline;
+}

@@ -5,6 +5,9 @@
 
 .projectWrapper {
     position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1167px;
     height: 80vh;
     margin-bottom: 3rem;
 }
@@ -15,11 +18,14 @@
     top: 0;
     height: 70%;
     width: 75%;
+    max-width: 600px;
+
     transition-duration: 1s;
     filter: brightness(80%);
 }
 
 .projectPreview img {
+    object-fit: cover;
     border: 2px solid black;
     height: 100%;
     width: 100%;
@@ -36,8 +42,9 @@
 
 .projectDescription {
     position: absolute;
-    bottom: 0;
+    top: 15%;
     right: 0;
+    max-width: 700px;
     background-color: var(--project-description-bg-color);
     color: var(--project-description-color);
     /* height: 55%; */
@@ -68,12 +75,8 @@
     text-align: justify;
 }
 
-.descripttionLine {
-    margin: 0 1.5rem;
-}
-
-@media screen and (max-width: 680px) {
-    .projectPreview {
+@media screen and (min-width: 680px) {
+    /* .projectPreview {
         left: 50%;
         transform: translate(-50%, 0);
         width: 85%;
@@ -84,5 +87,25 @@
         bottom: 0;
         right: 0;
         width: 100%;
+    } */
+}
+
+@media screen and (max-width: 680px) {
+    .projectWrapper {
+        height: 100vh;
+    }
+    .projectPreview {
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 85%;
+    }
+
+    .projectDescription {
+        position: absolute;
+        top: 55%;
+        bottom: 0;
+        right: 0;
+        width: 100%;
     }
 }
+
