@@ -1,11 +1,5 @@
 import "aos/dist/aos.css";
 import "./About.css";
-// import express_light from "../../Icons&Images/express_icon_light.svg"
-// import git_icon from "../../Icons&Images/git_icon.png";
-// import css_icon from "../../Icons&Images/css_icon.svg";
-// import django_icon from "../../Icons&Images/django_icon.svg";
-// import cIcon from "../../Icons&Images/c_icon.svg";
-// import cpluslplus_icon from "../../Icons&Images/C_plus_plus_icon.svg";
 import { css_icon, c_icon, django_icon, express_icon, git_icon, js_icon, mongodb_icon, nodejs_icon, npm_icon, python_icon, react_icon, vuejs_icon } from "../../../assets";
 
 const About = () => {

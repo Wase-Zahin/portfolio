@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
+    place-items: center;
 }
 
 .self_summary {
@@ -21,5 +22,4 @@
     padding: 1rem;
     height: 100px;
     width: 100px;
-    border: 0.5px dotted black;
 }

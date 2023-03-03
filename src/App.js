@@ -1,5 +1,3 @@
-import Aos from 'aos';
-import { useState, useEffect } from 'react';
 import './App.css';
 import About from './components/layout/About/About';
 import Contact from './components/layout/Contact/Contact';
@@ -21,5 +19,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

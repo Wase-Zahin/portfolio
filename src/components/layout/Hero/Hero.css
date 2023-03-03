@@ -1,13 +1,14 @@
 .hero {
     height: 100vh;
-    /* background-color: #e5e5f7; */
-    /* opacity: 0.8; */
-    background-image: var(--hero-section-bg);
+    background: var(--hero-section-bg);
     background-size: cover;
     background-repeat: no-repeat;
+    -webkit-transition: background-image .5s ease-in-out;
+    transition: background-image .5s ease-in-out;
 }
 
 .hero_mid {
+    margin-top: 2.5rem;
     height: 100%;
     display: flex;
     align-items: center;
@@ -132,7 +133,6 @@
         padding-bottom: 5rem;
         padding-top: 5rem;
         gap: 1rem;
-        /* background-color: var(--background-color); */
         color: var(--hero-section-text-color);
     }
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Menu from "../../utils/Menu";
 import Theme from "../../utils/Theme/Theme";
+import { Link } from 'react-scroll';
 import './Header.css';
 
 const Header = () => {
@@ -53,8 +54,17 @@ const Header = () => {
       <div className="fixedHeader">
         <h1>Z</h1>
         {computerScreen ?
-          <Theme></Theme> :
+          <nav className="nav">
+            <ul className="nav">
+              <li><Link to="about" smooth={true} duration={500} spy={true} activeClass="active">About</Link></li>
+              <li><Link to="projects" smooth={true} duration={500} spy={true} activeClass="active">Projects</Link></li>
+              <li><Link to="contact" smooth={true} duration={500} spy={true} activeClass="active">Contact</Link></li>
+            </ul>
+            <Theme></Theme>
+          </nav>
+          :
           <img
+            className="menuIcon"
             onClick={toggleMenu}
             src={require("../../Icons&Images/menu.png")}
             alt="menu">

@@ -3,14 +3,14 @@ import './Projects.css';
 
 const Projects = () => {
     return (
-        <div className="section_padding section_container">
+        <div  id='projects' className="section_padding section_container">
             <div className="header_contaner section_margin">
                 <div className="underline"></div>
                 <h1 className="section_name">Projects</h1>
                 <div className="underline"></div>
             </div>
 
-            <div id='projects'>
+            <div>
                 <div className='projectWrapper'>
                     <div className='projectPreview'>
                         <img src={kaixinwang_screenshot} alt="Chinese website" className='projectPreview'></img>

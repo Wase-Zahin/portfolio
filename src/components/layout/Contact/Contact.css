@@ -19,18 +19,22 @@ form {
     .contact_text {
         text-align: justify;
     }
+
     .project_contents {
         display: block;
         padding: 0;
     }
+
     .project_contents .contact_links_wrapper {
         width: 100%;
         max-width: 350px;
-        margin:  0 auto;
+        margin: 0 auto;
     }
+
     .contact_links_wrapper .contact_links {
         justify-content: start;
     }
+
     .project_contents form {
         width: 100%;
         max-width: 350px;
@@ -38,17 +42,21 @@ form {
         padding: 0;
     }
 }
+
 @media screen and (max-width: 778px) {
     form {
         width: 80%;
     }
 }
 
-form>input, form>textarea {
+form>input,
+form>textarea {
     padding: 6px;
 }
 
-form>input:focus, form>textarea:focus {
+form>input:focus,
+form>textarea:focus {
+    border: none;
     outline: 2px solid #ff6f61;
 }
 
@@ -80,5 +88,27 @@ a {
 }
 
 .wechat {
+    cursor: pointer;
     text-decoration: underline;
+    animation: pulse 4.5s ease-in-out infinite;
 }
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      color: red;
+    }
+    30% {
+      transform: scale(1.1);
+      border: 2px solid red;
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    80% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

@@ -18,7 +18,7 @@ import e_commerce_screenshot from "./Screenshot_2.png";
 import cv_maker_ss from "./CV_Maker_SS.png";
 import blog_site_ss from "./blog_site_ss.png";
 import wechat_qr from "./wechat_qr.jpg"
-import wechat_icon from "./wechat_icon.svg";
+import wechat_icon from "./Vector.svg";
 import linkedin_icon from "./linkedin_icon.svg";
 
 export {js_icon, mongodb_icon, npm_icon, python_icon, git_icon, github_icon, express_icon, nodejs_icon, css_icon, django_icon, c_plus_plus_icon, c_icon, vuejs_icon, react_icon, moon_icon, cv_maker_ss, kaixinwang_screenshot, e_commerce_screenshot, blog_site_ss, wechat_qr, wechat_icon, linkedin_icon}

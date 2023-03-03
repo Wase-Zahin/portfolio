@@ -10,6 +10,7 @@
     --font-family-normal: 'Ubuntu', sans-serif;
     --background-color: white;
     --font-color: black;
+    --menu-icon-color: brightness(0%);
     /* hero section */
     --hero-section-text-color: black;
     --hero-section-bg: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 10px), repeating-linear-gradient(#ffffff, #e2e2e2);
@@ -17,7 +18,7 @@
     --hero-section-border-bottom: 1px solid gray;
     /* project section */
     --project-header-color: #ff3725;
-    --project-description-bg-color: #151515;   
+    --project-description-bg-color: #151515;
     --project-description-color: white;
 }
 
@@ -27,6 +28,7 @@
     --font-family-normal: 'Ubuntu', sans-serif;
     --background-color: #191825;
     --font-color: white;
+    --menu-icon-color: brightness(100%);
     /* hero section */
     --hero-section-text-color: white;
     --hero-section-bg: repeating-radial-gradient(circle at 0 0, transparent 0, #191825 10px), repeating-linear-gradient(#191825, #201d2e);
@@ -44,7 +46,7 @@ body {
     width: 100%;
     background-color: var(--background-color);
     color: var(--font-color);
-    transition: background-color 5s;
+    transition: background-color .5s;
 }
 
 .section_container {
@@ -81,13 +83,16 @@ body {
 .overlay {
     display: none;
     position: fixed;
-    height: 100%; width: 100%;
-    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-.menu {
+.menu,
+.popup {
     display: none;
     transition: all 0.3s ease-in-out;
 }
@@ -102,16 +107,27 @@ body {
     animation: slideDown 0.3s ease-in-out;
 }
 
+.popup.open {
+    display: block;
+    height: 250px;
+    width: 200px;
+    z-index: 1099;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
     }
+
     to {
         transform: translateY(0);
     }
 }
-
-
 
 .section_padding {
     padding: 1rem;
