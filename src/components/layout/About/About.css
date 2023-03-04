@@ -23,3 +23,33 @@
     height: 100px;
     width: 100px;
 }
+
+.cv_link {
+    display: block;
+    background-color: #ff6f61;
+    border: 1px solid black;
+    font-size: var(--font-color);
+    padding: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cv_link:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 400px) {
+    .about_content {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo img {
+        height: 70px;
+        width: 70px;
+    }
+}

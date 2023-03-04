@@ -7,32 +7,6 @@ header {
     transition: background-color .5s;
 }
 
-.nav {
-    list-style: none;
-    display: flex;
-    font-size: 1.2rem;
-    gap: 5rem;
-    align-items: center;
-}
-
-.nav li {
-    cursor: pointer;
-}
-
-a:hover {
-    color: #ff6f61;
-    text-decoration: underline;
-}
-
-.active {
-    color: #ff6f61;
-    text-decoration: underline;
-}
-
-.menuIcon {
-    filter: var(--menu-icon-color);
-}
-
 .fixedHeader h1 {
     font-size: 2rem;
     color: #ff6f61;
@@ -52,4 +26,46 @@ a:hover {
 
 .fixedHeader img:hover {
     cursor: pointer;
+}
+
+.on {
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.25s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    font-size: 1.2rem;
+    gap: 5rem;
+    align-items: center;
+}
+
+.nav li {
+    cursor: pointer;
+}
+
+ul li a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+.active {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+.menuIcon {
+    filter: var(--menu-icon-color);
 }

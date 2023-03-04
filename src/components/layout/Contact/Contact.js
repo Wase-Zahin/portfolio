@@ -2,9 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { linkedin_icon, wechat_icon } from '../../../assets';
 import './Contact.css';
 import WechatQR from './WechatQR';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
     const [popupOpen, setPopupOpen] = useState(false);
+    const [state, handleSubmit] = useForm("mayzjayr");
+
+    useEffect(() => {
+        if (state.succeeded) {
+            alert('Your message has been sent. Thank you!');
+        }
+    }, [state.succeeded]);
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        handleSubmit(event);
+        event.target.reset(); // Reset the form
+    };
+
     const togglePopup = () => {
         setPopupOpen(!popupOpen);
     }
@@ -43,16 +58,50 @@ export default function Contact() {
                             alt='wechat icon'>
                         </img>
                         <a href='https://www.linkedin.com/in/zahin1010101/'>
-                            <img src={linkedin_icon} alt="LinkedIn Icon" />
+                            <img className='linkedIn' src={linkedin_icon} alt="LinkedIn Icon">
+
+                            </img>
                         </a>
                     </div>
                 </div>
 
-                <form>
-                    <input placeholder='Name'></input>
-                    <input placeholder='Email'></input>
-                    <textarea placeholder='Message' rows="8"></textarea>
-                    <button>Send</button>
+                <form onSubmit={handleFormSubmit}>
+                    <input
+                        placeholder='Name'
+                        id='name'
+                        type='name'
+                        name='name'
+                    />
+                    <ValidationError
+                        prefix='Name'
+                        field='name'
+                        errors={state.errors}
+                    />
+                    <input
+                        placeholder='Email'
+                        id="email"
+                        type="email"
+                        name="email"
+                    />
+                    <ValidationError
+                        prefix="Email"
+                        field="email"
+                        errors={state.errors}
+                    />
+                    <textarea
+                        rows="8"
+                        placeholder='Message'
+                        id="message"
+                        name="message"
+                    />
+                    <ValidationError
+                        prefix="Message"
+                        field="message"
+                        errors={state.errors}
+                    />
+                    <button type="submit" disabled={state.submitting}>
+                        Submit
+                    </button>
                 </form>
             </div>
             <WechatQR popupOpen={popupOpen}></WechatQR>

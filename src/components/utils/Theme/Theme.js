@@ -1,26 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import './Theme.css';
 import { moon_icon } from "../../../assets";
 
-
 const Theme = () => {
+    const [theme, setTheme] = useState('light');
+
     const toggleTheme = () => {
-        const root = document.documentElement;
+        setTheme(theme === 'light' ? 'dark' : 'light');
         const moonIcon = document.querySelector('.moonIcon');
-        if (root.className === 'light') {
-            root.className = 'dark';
+        if (theme === 'light') {
             moonIcon.classList.remove('noneDisplay');
         }
         else {
             moonIcon.classList.add('noneDisplay');
-            root.className = 'light'
         };
     }
 
     useEffect(() => {
-        // use light theme on mount
-        document.documentElement.className = 'light';
-    }, []);
+        document.documentElement.className = theme;
+    }, [theme]);
 
     return (
         <div className="toggle-theme-wrapper">

@@ -5,10 +5,11 @@ import Footer from './components/layout/Footer';
 import Header from './components/layout/Header/Header';
 import Hero from './components/layout/Hero/Hero';
 import Projects from './components/layout/Projects/Projects';
+document.documentElement.className = 'light';
 
 function App() {
   return (
-    <div className="App">
+    <div id="App">
       <Header></Header>
       <Hero></Hero>
       <About></About>
