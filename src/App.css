@@ -19,7 +19,7 @@
     /* project section */
     --project-header-color: #ff3725;
     --project-description-bg-color: #151515;
-    --project-description-color: white;
+    --project-description-color: black;
 }
 
 :root.dark {
