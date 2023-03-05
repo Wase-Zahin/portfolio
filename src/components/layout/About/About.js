@@ -1,12 +1,6 @@
 import "aos/dist/aos.css";
 import "./About.css";
-// import express_light from "../../Icons&Images/express_icon_light.svg"
-// import git_icon from "../../Icons&Images/git_icon.png";
-// import css_icon from "../../Icons&Images/css_icon.svg";
-// import django_icon from "../../Icons&Images/django_icon.svg";
-// import cIcon from "../../Icons&Images/c_icon.svg";
-// import cpluslplus_icon from "../../Icons&Images/C_plus_plus_icon.svg";
-import { css_icon, c_icon, django_icon, express_icon, git_icon, js_icon, mongodb_icon, nodejs_icon, npm_icon, python_icon, react_icon, vuejs_icon } from "../../../assets";
+import { css_icon, c_icon, django_icon, express_icon, git_icon, js_icon, mongodb_icon, nodejs_icon, npm_icon, python_icon, react_icon, vuejs_icon, my_cv } from "../../../assets";
 
 const About = () => {
     return (
@@ -17,7 +11,7 @@ const About = () => {
                 <div className="underline"></div>
             </div>
             <div className="about_content">
-                <p className="self_summary">I am a highly ambitious individual with a passion for technology and software development. My skills in computer programming and problem-solving have allowed me to excel in the field and create innovative solutions for various projects. I am always seeking new challenges and opportunities to expand my knowledge and skills. My portfolio showcases my abilities and demonstrates my dedication to the field. I am excited to continue growing in the tech industry and making a positive impact.</p>
+                <p className="self_summary">I am a highly ambitious individual with a passion for technology and software development. My skills in computer programming and problem-solving have allowed me to excel in the field and create innovative solutions for various projects. I am always seeking new challenges and opportunities to expand my knowledge and skills. My portfolio showcases my abilities and demonstrates my dedication to the field. I am excited to continue growing in the tech industry and making a positive impact. </p>
                 <div className="logo">
                     <div className="logo_col1">
                         <img src={nodejs_icon} alt="Nodejs Logo"></img>
@@ -39,6 +33,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <a className="cv_link" href={my_cv}>Download My CV</a>
         </div>
     )
 }

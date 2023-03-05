@@ -1,17 +1,22 @@
 header {
     z-index: 999;
-    position: relative;
-    top:0; left: 0;
+    position: fixed;
+    width: 100%;
+    top: 0; left: 0;
     padding: 0.2rem 1.5rem;
+    transition: background-color .5s;
 }
+
 .fixedHeader h1 {
     font-size: 2rem;
     color: #ff6f61;
 }
+
 .fixedHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 }
 
 .fixedHeader img {
@@ -21,4 +26,46 @@ header {
 
 .fixedHeader img:hover {
     cursor: pointer;
+}
+
+.on {
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.25s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    font-size: 1.2rem;
+    gap: 5rem;
+    align-items: center;
+}
+
+.nav li {
+    cursor: pointer;
+}
+
+ul li a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+.active {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+.menuIcon {
+    filter: var(--menu-icon-color);
 }
