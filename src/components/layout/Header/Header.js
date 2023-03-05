@@ -15,7 +15,7 @@ const Header = () => {
     const rotationAngle = window.scrollY * 0.2; // adjust the rotation speed as desired
     setRotation(rotationAngle);
   }
-  
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -24,8 +24,11 @@ const Header = () => {
   }, []);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
     const header = document.querySelector('.header');
+    const menuIcon = document.querySelector('.menu-icon');
+    menuIcon.classList.toggle('clicked');
+
+    setMenuOpen(!menuOpen);
 
     if (menuOpen) {
       header.classList.remove('on');
@@ -59,11 +62,13 @@ const Header = () => {
   useEffect(() => {
     const overlay = document.querySelector(".overlay");
     const header = document.querySelector('.header');
+    const menuIcon = document.querySelector('.menu-icon');
 
     const closeMenu = () => {
       setMenuOpen(false);
       overlay.style.display = "none";
       header.classList.remove('on');
+      menuIcon.classList.toggle('clicked');
     };
 
     if (menuOpen) {
@@ -91,12 +96,17 @@ const Header = () => {
               <Theme></Theme>
             </nav>
             :
-            <img
+            <div class="menu-icon" onClick={toggleMenu}>
+              <span class="menu-line"></span>
+              <span class="menu-line"></span>
+            </div>}
+
+          {/* <img
               className="menuIcon"
               onClick={toggleMenu}
               src={require("../../Icons&Images/menu.png")}
               alt="menu">
-            </img>}
+            </img>} */}
         </div>
         <div>
           <Menu items={

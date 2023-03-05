@@ -39,6 +39,7 @@
 }
 
 .projectDescription {
+    position: relative;
     transform: translate3d(-25%, 0px, 0px);
     min-width: 450px;
     height: 100%;
@@ -53,9 +54,21 @@
     transition-duration: 1s;
 }
 
+.projectDescription h1 {
+    background-color: var(--project-header-color);
+    position: absolute;
+    bottom: 100%;
+    margin-left: 1rem;
+    padding: 0.7rem;
+    border: 1px solid #8b6911;
+    border-bottom: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    letter-spacing: 1px;
+}
+
 .projectInfo {
     font-size: 1.6em;
-    margin-top: 3rem;
     padding: 1.5rem;
     text-align: justify;
 }
@@ -71,7 +84,7 @@
     align-items: center;
     gap: 2rem;
     font-size: 1.4rem;
-    margin: 0 2rem 2rem 0;
+    padding: 1rem;
 }
 
 .projectLinks div {
@@ -82,11 +95,6 @@
 
 .projectLinks div a {
     text-decoration: none;
-}
-
-.projectDescription div img {
-    height: 30px;
-    width: 30px;
 }
 
 .previewDecorator {

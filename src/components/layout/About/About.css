@@ -49,6 +49,19 @@
         flex-direction: column;
     }
     .logo img {
+        height: 95px;
+        width: 95px;
+    }
+    .projectWrapper .projectLinks {
+        justify-content: center;
+        text-align: center;
+        margin: 0.5rem auto 1.5rem auto; 
+        gap: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .logo img {
         height: 70px;
         width: 70px;
     }

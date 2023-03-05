@@ -11,13 +11,14 @@
     --background-color: white;
     --font-color: black;
     --menu-icon-color: brightness(0%);
+    --arrow-top-right: brightness(0%);
     /* hero section */
     --hero-section-text-color: black;
     --hero-section-bg: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 10px), repeating-linear-gradient(#ffffff, #e2e2e2);
     --hero-img-box-shadow: 3px 6px 15px rgba(128, 128, 128, 0.897);
     --hero-section-border-bottom: 1px solid gray;
     /* project section */
-    --project-header-color: #ff3725;
+    --project-header-color: #ffd54c;
     --project-description-bg-color: #151515;
     --project-description-color: black;
 }
@@ -29,6 +30,7 @@
     --background-color: #191825;
     --font-color: white;
     --menu-icon-color: brightness(100%);
+    --arrow-top-right: brightness(100%);
     /* hero section */
     --hero-section-text-color: white;
     --hero-section-bg: repeating-radial-gradient(circle at 0 0, transparent 0, #191825 10px), repeating-linear-gradient(#191825, #201d2e);
@@ -36,7 +38,7 @@
     --hero-section-border-right: 1px solid black;
     --hero-section-border-bottom: 1px solid black;
     /* project section */
-    --project-header-color: #ff3725;
+    --project-header-color: #FFB84C;
     --project-description-bg-color: white;
     --project-description-color: black;
 }
@@ -122,7 +124,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1.5rem 0;
-    animation: slideDown 0.5s ease-in-out;
 }
 
 .popup, .popup.closed {
@@ -142,16 +143,6 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
 .section_padding {
     padding: 1rem;
 }
@@ -162,6 +153,22 @@ body {
 
 .about-section-main {
     padding: 1.2rem;
+}
+
+.arrow_top_right {
+    filter: var(--arrow-top-right);
+    height: 30px;
+    width: 30px;
+}
+
+.arrow_top_right:hover {
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+.arrow_top_right:hover,
+.arrow_top_right {
+  transition: transform 0.3s ease-in-out;
 }
 
 footer {
