@@ -21,6 +21,8 @@
     --project-header-color: #ffd54c;
     --project-description-bg-color: #151515;
     --project-description-color: black;
+    /* contact section */
+    --input-color: #F7F1E5;
 }
 
 :root.dark {
@@ -41,6 +43,8 @@
     --project-header-color: #FFB84C;
     --project-description-bg-color: white;
     --project-description-color: black;
+    /* contact section */
+    --input-color: #F7F1E5;
 }
 
 body {
@@ -93,37 +97,9 @@ body {
     z-index: 1;
 }
 
-.menu,
 .popup {
     display: none;
     transition: all 0.3s ease-in-out;
-}
-
-.menu.closed {
-    animation: slideUp 0.5s ease-in-out;
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-100%);
-    }
-}
-
-.menu.open {
-    height: auto;
-    display: grid;
-    gap: 1.5rem;
-    font-size: 1.6rem;
-    font-weight: 600;
-    place-items: center;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem 0;
 }
 
 .popup, .popup.closed {
@@ -156,9 +132,14 @@ body {
 }
 
 .arrow_top_right {
-    filter: var(--arrow-top-right);
+    filter: brightness(0%);
     height: 30px;
     width: 30px;
+}
+
+.projectLinks div a:hover {
+    color: black;
+    text-decoration: none;
 }
 
 .arrow_top_right:hover {
@@ -175,9 +156,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2.5rem;
-    height: 3rem;
     width: 100%;
-    background-color: #CFD2CF;
     gap: 0.5rem;
+    color: white;
+    background: #393053;
+
+    padding: 3rem;
 }

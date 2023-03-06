@@ -24,16 +24,10 @@ const Header = () => {
   }, []);
 
   const toggleMenu = () => {
-    const header = document.querySelector('.header');
     const menuIcon = document.querySelector('.menu-icon');
     menuIcon.classList.toggle('clicked');
 
     setMenuOpen(!menuOpen);
-
-    if (menuOpen) {
-      header.classList.remove('on');
-    }
-    else header.classList.add('on');
   }
 
   useEffect(() => {
@@ -81,44 +75,41 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <header className="header">
-      <div className="section_container section_padding">
-        <div className="fixedHeader">
-          {/* <h1>Z</h1> */}
-          <img className="myname" src={logo} alt="Logo" style={{ transform: `rotate(${rotation}deg)` }}></img>
-          {computerScreen ?
-            <nav className="nav">
-              <ul className="nav">
-                <li><Link to="about" smooth={true} duration={500} spy={true} activeClass="active">About</Link></li>
-                <li><Link to="projects" smooth={true} duration={500} spy={true} activeClass="active">Projects</Link></li>
-                <li><Link to="contact" smooth={true} duration={500} spy={true} activeClass="active">Contact</Link></li>
-              </ul>
-              <Theme></Theme>
-            </nav>
-            :
-            <div class="menu-icon" onClick={toggleMenu}>
-              <span class="menu-line"></span>
-              <span class="menu-line"></span>
-            </div>}
+    <div>
+      <header className="header">
+        <div className="section_container section_padding">
+          <div className="fixedHeader">
+            {/* <h1>Z</h1> */}
+            <img className="myname" src={logo} alt="Logo" style={{ transform: `rotate(${rotation}deg)` }}></img>
+            {computerScreen ?
+              <nav className="nav">
+                <ul className="nav">
+                  <li><Link to="about" smooth={true} duration={500} spy={true} activeClass="active">About</Link></li>
+                  <li><Link to="projects" smooth={true} duration={500} spy={true} activeClass="active">Projects</Link></li>
+                  <li><Link to="contact" smooth={true} duration={500} spy={true} activeClass="active">Contact</Link></li>
+                </ul>
+                <Theme></Theme>
+              </nav>
+              :
+              <div className="menu-icon" onClick={toggleMenu}>
+                <span className="menu-line"></span>
+                <span className="menu-line"></span>
+              </div>}
 
-          {/* <img
-              className="menuIcon"
-              onClick={toggleMenu}
-              src={require("../../Icons&Images/menu.png")}
-              alt="menu">
-            </img>} */}
+          </div>
         </div>
-        <div>
-          <Menu items={
-            [
-              <Link to="about" smooth={true} duration={500} spy={true} activeClass="active">About</Link>,
-              <Link to="projects" smooth={true} duration={500} spy={true} activeClass="active">Projects</Link>,
-              <Link to="contact" smooth={true} duration={500} spy={true} activeClass="active">Contact</Link>
-            ]}
-            menuOpen={menuOpen}></Menu>
-        </div>
+      </header>
+
+      <div className="dropdown">
+        <Menu items={
+          [
+            <Link to="about" smooth={true} duration={500} spy={true} activeClass="active">About</Link>,
+            <Link to="projects" smooth={true} duration={500} spy={true} activeClass="active">Projects</Link>,
+            <Link to="contact" smooth={true} duration={500} spy={true} activeClass="active">Contact</Link>
+          ]}
+          menuOpen={menuOpen}></Menu>
       </div>
-    </header>
+    </div>
   )
 }
 

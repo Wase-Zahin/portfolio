@@ -1,9 +1,9 @@
-
 .about_content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
     place-items: center;
+    margin-bottom: 2rem;
 }
 
 .self_summary {

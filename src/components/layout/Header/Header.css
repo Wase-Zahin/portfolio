@@ -1,5 +1,5 @@
 header {
-    z-index: 999;
+    z-index: 100;
     position: fixed;
     width: 100%;
     top: 0;
@@ -29,22 +29,6 @@ header {
     cursor: pointer;
 }
 
-.on {
-    background-color: white;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    animation: slideDown 0.3s;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
 .nav {
     list-style: none;
     display: flex;
@@ -67,16 +51,69 @@ ul li a:hover {
     text-decoration: underline;
 }
 
-/* .menuIcon {
-    filter: var(--menu-icon-color);
-} */
+.dropdown a {
+    text-decoration: none;
+}
+
+.menu {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+    font-size: 1.6rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li {
+    list-style: none;
+    padding: 8px;
+}
+
+.menu.open {
+    opacity: 1;
+    animation: slideDown 0.5s ease-in-out;
+    z-index: 50;
+}
+
+.menu.closed {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 50;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
 
 .menu-icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20px;
+    width: 1.8rem;
     height: 20px;
     gap: 0.5rem;
     cursor: pointer;

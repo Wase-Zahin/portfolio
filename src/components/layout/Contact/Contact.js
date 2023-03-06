@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { linkedin_icon, wechat_icon } from '../../../assets';
+import { arrow, linkedin_icon, wechat_icon } from '../../../assets';
 import './Contact.css';
 import WechatQR from './WechatQR';
 import { useForm, ValidationError } from '@formspree/react';
@@ -42,7 +42,7 @@ export default function Contact() {
     }, [popupOpen]);
 
     return (
-        <div id="contact" className='section_padding section_container'>
+        <div id="contact" className='section_padding'>
             <div className="header_contaner section_margin">
                 <div className="underline"></div>
                 <h1 className="section_name">Contact</h1>
@@ -99,9 +99,12 @@ export default function Contact() {
                         field="message"
                         errors={state.errors}
                     />
-                    <button type="submit" disabled={state.submitting}>
-                        Submit
-                    </button>
+                    <div className='submitDiv'>
+                        <button type="submit" disabled={state.submitting}>
+                            Submit
+                        </button>
+                        <img className='arrow_top_right' src={arrow} alt="Top right arrow"></img>
+                    </div>
                 </form>
             </div>
             <WechatQR popupOpen={popupOpen}></WechatQR>

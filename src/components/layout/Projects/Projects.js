@@ -12,7 +12,7 @@ const Projects = () => {
 
             <div className='projectsWrapper'>
                 <div className='projectWrapper'>
-                    <div className='projectPreview'>
+                    <div className='projectPreview relative'>
                         <img src={kaixinwang_screenshot} alt="Chinese website" className='projectPreview'></img>
                         <div className='previewDecorator'></div>
                     </div>
