@@ -142,6 +142,9 @@ body {
     text-decoration: none;
 }
 
+
+
+.arrow_link:hover + .arrow_top_right,
 .arrow_top_right:hover {
     cursor: pointer;
     transform: rotate(45deg);

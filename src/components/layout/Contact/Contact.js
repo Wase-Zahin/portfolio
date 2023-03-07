@@ -100,10 +100,10 @@ export default function Contact() {
                         errors={state.errors}
                     />
                     <div className='submitDiv'>
-                        <button type="submit" disabled={state.submitting}>
+                        <button className='arrow_link' type="submit" disabled={state.submitting}>
                             Submit
                         </button>
-                        <img className='arrow_top_right' src={arrow} alt="Top right arrow"></img>
+                        <img className='arrow_top_right send' src={arrow} alt="Top right arrow"></img>
                     </div>
                 </form>
             </div>
