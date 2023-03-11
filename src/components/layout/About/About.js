@@ -1,4 +1,3 @@
-import "aos/dist/aos.css";
 import "./About.css";
 import { css_icon, c_icon, django_icon, express_icon, git_icon, js_icon, mongodb_icon, nodejs_icon, npm_icon, python_icon, react_icon, vuejs_icon, my_cv } from "../../../assets";
 

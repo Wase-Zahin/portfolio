@@ -100,11 +100,11 @@ const Projects = () => {
                                 <p className='skillsUsed'>Built using HTML and CSS</p>
                                 <div className='projectLinks'>
                                     <div>
-                                        <a className='arrow_link' href='#'>Live Site</a>
+                                        <a className='arrow_link' href='todododoto.netlify.app'>Live Site</a>
                                         <img className='arrow_top_right' src={arrow} alt="Top right arrow"></img>
                                     </div>
                                     <div>
-                                        <a className='arrow_link' href='#'>Github</a>
+                                        <a className='arrow_link' href='https://github.com/Wase-Zahin/todo'>Github</a>
                                         <img className='arrow_top_right' src={arrow} alt="Top right arrow"></img>
                                     </div>
                                 </div>
