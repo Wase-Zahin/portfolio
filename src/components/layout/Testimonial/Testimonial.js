@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Testimonial.css';
 import { placeholder_me } from '../../../assets';
-import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai';
+import { BiRightArrow, BiLeftArrow } from 'react-icons/bi';
 
 export default function Testimonial() {
     const testimonials = [
@@ -58,12 +58,12 @@ export default function Testimonial() {
                 </div>
                 {currentIndex !== 0 && (
                     <div className='previous' onClick={handleSwipeLeft}>
-                        <AiOutlineArrowLeft className='arrow_left' />
+                        <BiLeftArrow className='arrow_left' />
                     </div>
                 )}
                 {currentIndex !== testimonials.length - 1 && (
                     <div className='next' onClick={handleSwipeRight}>
-                        <AiOutlineArrowRight />
+                        <BiRightArrow />
                     </div>
                 )}
             </div>
