@@ -23,5 +23,6 @@ import linkedin_icon from "./linkedin_icon.svg";
 import my_cv from "./CV.pdf";
 import logo from "./logo.png";
 import arrow from "./arrow_top_right.svg";
+import placeholder_me from './placeholder_me.png'
 
-export {js_icon, mongodb_icon, npm_icon, python_icon, git_icon, github_icon, express_icon, nodejs_icon, css_icon, django_icon, c_plus_plus_icon, c_icon, vuejs_icon, react_icon, moon_icon, cv_maker_ss, todo_project_ss, e_commerce_screenshot, blog_site_ss, wechat_qr, wechat_icon, linkedin_icon, my_cv, logo, arrow}
+export {js_icon, mongodb_icon, npm_icon, python_icon, git_icon, github_icon, express_icon, nodejs_icon, css_icon, django_icon, c_plus_plus_icon, c_icon, vuejs_icon, react_icon, moon_icon, cv_maker_ss, todo_project_ss, e_commerce_screenshot, blog_site_ss, wechat_qr, wechat_icon, linkedin_icon, my_cv, logo, arrow, placeholder_me}

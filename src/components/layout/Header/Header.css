@@ -8,6 +8,10 @@ header {
     transition: background-color .5s;
 }
 
+.mainLogo {
+    cursor: pointer;
+}
+
 .fixedHeader h1 {
     font-size: 2rem;
     color: #ff6f61;
@@ -133,4 +137,10 @@ ul li a:hover {
 
 .menu-icon.clicked .menu-line:nth-child(2) {
     transform: rotate(-45deg) translate(2px, -2px);
+}
+
+@media screen and (max-width: 1000px) {
+    .nav {
+        gap: 3rem;
+    }
 }

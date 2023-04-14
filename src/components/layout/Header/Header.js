@@ -79,13 +79,16 @@ const Header = () => {
       <header className="header">
         <div className="section_container section_padding">
           <div className="fixedHeader">
-            {/* <h1>Z</h1> */}
-            <img className="myname" src={logo} alt="Logo" style={{ transform: `rotate(${rotation}deg)` }}></img>
+            <Link to="hero" smooth={true} duration={500} spy={true} activeClass="active">
+              <img className="mainLogo" src={logo} alt="Logo" style={{ transform: `rotate(${rotation}deg)` }}></img>
+            </Link>
             {computerScreen ?
               <nav className="nav">
                 <ul className="nav">
+                  <li><Link to="hero" smooth={true} duration={500} spy={true} activeClass="active">Home</Link></li>
                   <li><Link to="about" smooth={true} duration={500} spy={true} activeClass="active">About</Link></li>
                   <li><Link to="projects" smooth={true} duration={500} spy={true} activeClass="active">Projects</Link></li>
+                  <li><Link to="testimonial" smooth={true} duration={500} spy={true} activeClass="active">Testimonial</Link></li>
                   <li><Link to="contact" smooth={true} duration={500} spy={true} activeClass="active">Contact</Link></li>
                 </ul>
                 <Theme></Theme>

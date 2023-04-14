@@ -101,7 +101,7 @@ export default function Contact() {
                     />
                     <div className='submitDiv'>
                         <button className='arrow_link' type="submit" disabled={state.submitting}>
-                            Submit
+                            Send
                         </button>
                         <img className='arrow_top_right send' src={arrow} alt="Top right arrow"></img>
                     </div>
