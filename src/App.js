@@ -16,7 +16,7 @@ function App() {
       <Hero></Hero>
       <About></About>
       <Projects></Projects>
-      <Testimonial></Testimonial>
+      {/* <Testimonial></Testimonial> */}
       <Contact></Contact>
       <Footer></Footer>
       <div className="overlay"></div>
