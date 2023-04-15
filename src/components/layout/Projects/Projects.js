@@ -24,11 +24,11 @@ const Projects = () => {
                             <p className='skillsUsed'>Built using React, Django and CSS.</p>
                             <div className='projectLinks'>
                                 <div>
-                                    <a className='arrow_link' href='#'>Live Site</a>
+                                    <a className='arrow_link' href='https://shopsmooth.netlify.app'>Live Site</a>
                                     <img className='arrow_top_right' src={arrow} alt="Top right arrow"></img>
                                 </div>
                                 <div>
-                                    <a className='arrow_link' href='#'>Github</a>
+                                    <a className='arrow_link' href='https://github.com/Wase-Zahin/e-commerce'>Github</a>
                                     <img className='arrow_top_right' src={arrow} alt="Top right arrow"></img>
                                 </div>
                             </div>
@@ -74,11 +74,11 @@ const Projects = () => {
                         <div>
                             <div className='projectLinks'>
                                 <div>
-                                    <a className='arrow_link' href='#'>Live Site</a>
+                                    <a className='arrow_link' href='https://onlinejournal.netlify.app/home'>Live Site</a>
                                     <img className='arrow_top_right' src={arrow} alt="Top right arrow"></img>
                                 </div>
                                 <div>
-                                    <a className='arrow_link' href='#'>Github</a>
+                                    <a className='arrow_link' href='https://github.com/Wase-Zahin/full-stack'>Github</a>
                                     <img className='arrow_top_right' src={arrow} alt="Top right arrow"></img>
                                 </div>
                             </div>
@@ -92,15 +92,15 @@ const Projects = () => {
                         <div className='previewDecorator'></div>
                     </div>
                     <div className='projectDescription'>
-                        <h1>Kaixinwang</h1>
-                        <div className='projectInfo'>This is a Chinese website created using only HTML and CSS, featuring gaming content and advertising. The project provided the opportunity to develop skills in design, advertising, and project management, and may have also imparted knowledge about website hosting and content curation. Despite its simplicity, the website serves as a valuable learning experience for those interested in web development and content creation.</div>
+                        <h1>Todo App</h1> 
+                        <div className='projectInfo'>a simple yet effective todo app! With the ability to add tasks to your inbox, create new projects, and remove completed tasks, this app helps keep your daily to-dos organized and on track. While it may be a basic app, its functionality and ease of use make it a valuable addition to any productivity toolkit. Check it out for yourself and streamline your task management today!</div>
                         <hr></hr>
                         <div>
                             <div>
                                 <p className='skillsUsed'>Built using HTML and CSS</p>
                                 <div className='projectLinks'>
                                     <div>
-                                        <a className='arrow_link' href='todododoto.netlify.app'>Live Site</a>
+                                        <a className='arrow_link' href='https://todododoto.netlify.app'>Live Site</a>
                                         <img className='arrow_top_right' src={arrow} alt="Top right arrow"></img>
                                     </div>
                                     <div>

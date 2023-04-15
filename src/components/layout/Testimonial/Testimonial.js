@@ -63,7 +63,7 @@ export default function Testimonial() {
                 )}
                 {currentIndex !== testimonials.length - 1 && (
                     <div className='next' onClick={handleSwipeRight}>
-                        <BiRightArrow />
+                        <BiRightArrow className='arrow_right' />
                     </div>
                 )}
             </div>

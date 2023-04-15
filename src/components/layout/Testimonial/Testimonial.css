@@ -41,6 +41,10 @@
     gap: 0.5rem;
 }
 
+.arrow_right, .arrow_left {
+    color: black;
+}
+
 .previous,
 .next {
     display: flex;
